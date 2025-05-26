@@ -527,7 +527,6 @@ figure {
 .team-card_header {
     font-size: var(--step-2);
     font-weight: bold;
-    border-bottom: 1px solid var(--primary);
     padding-bottom: var(--space-2xs);
 }
 
