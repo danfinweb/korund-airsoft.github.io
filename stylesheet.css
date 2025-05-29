@@ -473,21 +473,54 @@ figure {
         max-width: 60ex;
         overflow: hidden;
         aspect-ratio: 1/1;
-
-        & img {
-            display: block;
-            width: 100%;
-        }
     }
 }
 
-.landingpage-keyvisual_photo img {
-            object-fit: cover;
-            object-position: center top;
+.landingpage-keyvisual_slideshow {
+    position: relative;
+}
+
+@keyframes dissolve {
+  0% { opacity: 1 }
+  16.5%, 66% { opacity: 0; }
+  82.5% { opacity: 1 }
+}
+
+.landingpage-keyvisual_photo {
+    background-image: url("assets/images/Assault_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+    &::before,
+    &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+    
+    &::before {
+    content: "";
+    background-image: url("assets/images/Recon_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: 20s infinite dissolve;
+    }
+
+    &::after {
+    content: "";
+    background-image: url("assets/images/Defender_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: 20s infinite dissolve;
+    animation-delay: 6s;
+    }
 }
 
 .landingpage-keyvisual_logo {
     padding: var(--space-xl);
+    justify-content: center;
     & logo {
         object-fit: contain;
     }
@@ -518,14 +551,27 @@ figure {
 .team-card {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-    padding: var(--space-2xs) var(--space-s-m) var(--space-m) var(--space-s);
+    gap: var(--space-2xs);
+    padding: var(--space-s);
+    background-color: var(--base-200);
+    border-radius: var(--space-xs);
     background-color: var(--base-100);
-    border-radius: var(--space-3xs);
 }
 
 .team-card_header {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: var(--space-2xs);
+}
+
+.team-card_header_title {
+    display: block;
     font-size: var(--step-2);
+    font-weight: bold;
+    
+}
+
+.team-card_header_subtitle {
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -543,8 +589,12 @@ figure {
 
 .team-card_meta {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     margin: 0;
+
+    & dd {
+        margin-left: var(--space-s)
+    }
 
     & dt {
         color: var(--primary);
