@@ -180,8 +180,8 @@ figure {
 .page-nav-toggle {
     position: absolute;
     z-index: 2;
-    top: var(--space-m);
-    right: var(--space-m);
+    top: var(--space-s);
+    right: var(--space-s);
     background: transparent;
     border: none;
     appearance: none;
@@ -254,7 +254,7 @@ figure {
     gap: var(--space-xs);
     align-items: center;
     margin-right: auto;
-    font-size: var(--step-2);
+    font-size: var(--step-1);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -264,7 +264,7 @@ figure {
 }
 
 .page-nav_logo {
-    width: var(--space-xl);
+    width: var(--space-l);
 }
 
 @media screen AND (min-width: 40rem) {
@@ -458,6 +458,13 @@ figure {
 
 .keyvisual-header_figure {
     background-color: var(--base-300);
+    border-radius: var(--space-3xs);
+    
+    & img {
+        height: 100%;
+
+        border-radius: var(--space-3xs);
+    }
 }
 
 .landingpage-keyvisual {
@@ -519,7 +526,7 @@ figure {
 }
 
 .landingpage-keyvisual_logo {
-    padding: var(--space-xl);
+    padding: var(--space-m);
     justify-content: center;
     & logo {
         object-fit: contain;
@@ -554,7 +561,7 @@ figure {
     gap: var(--space-2xs);
     padding: var(--space-s);
     background-color: var(--base-200);
-    border-radius: var(--space-xs);
+    border-radius: var(--space-3xs);
     background-color: var(--base-100);
 }
 
