@@ -302,7 +302,7 @@ figure {
 .page-footer {
     display: flex;
     justify-content: center;
-    padding: var(--space-m-l);
+    padding: var(--space-s);
     background-color: var(--base-100);
     color: var(--base-content);
 
