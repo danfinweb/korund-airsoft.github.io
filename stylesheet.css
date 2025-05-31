@@ -59,13 +59,13 @@
 :root {
   color-scheme: light dark;
 
-  --primary: #736D42;
+  --primary: #776b1d;
   --primary-content: #FFFFFF;
-  --base-100: light-dark(#FFFFFF, #262317);
+  --base-100: light-dark(#FFFFFF, #28230b);
   --base-200: light-dark(#EFEEE9, #141105);
   --base-300: #FAFAFA;
   --base-content: light-dark(#141105, #EFEEE9);
-  --neutral: #262317;
+  --neutral: #28230b;
   --neutral-dark: #141105;
   --neutral-content: #E6E6E6;
 }
@@ -156,6 +156,10 @@ main {
 
 h1 {
     margin: 0;
+}
+
+.headline-margin {
+    margin-bottom: var(--space-s);
 }
 
 h3 {
@@ -328,12 +332,15 @@ figure {
 }
 
 .button {
-    display: inline-block;
+    display: flex;
     padding: var(--space-xs);
-    border-radius: var(--space-2xs);
+    border-radius: var(--space-3xs);
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .button-primary {
@@ -344,39 +351,49 @@ figure {
 .article {
 
     & .keyvisual {
-        max-height: 20vh;
+        max-height: 50vh;
         overflow: hidden;
         display: flex;
-        background-color: var(--base-300);
         justify-content: center;
 
         & img {
             object-fit: cover;
             object-position: center center;
+            border-radius: var(--space-3xs);
         }
     }
 }
 
 .article-cards-horizontal {
     display: grid;
-    gap: var(--space-3xs) var(--space-m);
+    gap: var(--space-3xs) var(--space-s);
     grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content max-content 1fr;
+    grid-template-rows: max-content max-content max-content max-content;
 }
 
 .article-cards-vertical {
     display: grid;
     gap: var(--space-s) var(--space-m);
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 4fr;
 }
 
 .article-card {
     display: grid;
     margin-block-end: var(--space-m);
+    background-color: var(--base-100);
+    padding: var(--space-s);
+    border-radius: var(--space-3xs);
+
+    & div {
+        display: flex;
+        gap: var(--space-xs);
+        flex-direction: column;
+    }
 
     .article-cards-vertical & {
         grid-column: 1/-1;
         grid-template-columns: subgrid;
+        gap: var(--space-s);
 
         & > div {
             display: flex;
@@ -392,7 +409,6 @@ figure {
     & figure {
         aspect-ratio: 16/9;
         display: flex;
-        background-color: var(--base-300);
     }
 
     & header {
@@ -407,10 +423,11 @@ figure {
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        border-radius: var(--space-3xs);
     }
 
     & h1 {
-        font-size: var(--step-0);
+        font-size: var(--step-1);
     }
 
     & .article-card_body {
@@ -418,7 +435,7 @@ figure {
             --clamp-line: 4;
         }
         .article-cards-vertical & {
-            --clamp-line: 3;
+            --clamp-line: 4;
         }
     }
 }
@@ -457,13 +474,13 @@ figure {
 }
 
 .keyvisual-header_figure {
-    background-color: var(--base-300);
     border-radius: var(--space-3xs);
     
     & img {
-        height: 100%;
-
         border-radius: var(--space-3xs);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
