@@ -214,9 +214,7 @@ figure {
 .page-nav {
     color: var(--base-content);
     background-color: var(--base-100);
-
     font-size: var(--step-2);
-
     padding: var(--space-s);
 
     & .page-nav_logo-type {
@@ -257,7 +255,7 @@ figure {
 
 .page-nav_logo-wrap {
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--space-2xs);
     align-items: center;
     margin-right: auto;
     font-size: var(--step-1);
@@ -270,7 +268,11 @@ figure {
 }
 
 .page-nav_logo {
-    width: var(--space-l);
+    width: var(--space-m);
+    background-color: var(--neutral-dark);
+    padding: var(--space-3xs);
+    border-radius: var(--space-l);
+    border: 1px solid var(--primary);
 }
 
 @media screen AND (min-width: 40rem) {
