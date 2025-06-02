@@ -1,13 +1,21 @@
 <!DOCTYPE html><html data-theme="dark"><head>
-    <title></title>
+    <title>Team – KORUND Airsoft</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" href="../favicon.ico" sizes="32x32">
-    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/images/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/korund-patch.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png"><!-- 180×180 -->
     <link rel="stylesheet" href="../stylesheet.css">
-    <script src=""></script>
+    <script type="importmap">
+  {
+    "imports": {
+      "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.2.2/dist/stimulus.js"
+    }
+  }
+</script>
+
+    <script type="module" src="../js/controllers.js"></script>
   </head>
   <body data-controller="color-scheme-toggle">
     <dialog id="color-scheme-dialog">
@@ -34,18 +42,18 @@
     </button>
     <nav class="page-nav">
       <a href="../" class="page-nav_logo-wrap">
-        <img src="../assets/images/korund-patch.svg" class="page-nav_logo">
+        <img src="../assets/images/korund_logo.svg" class="page-nav_logo">
         <span class="page-nav_logo-type">Korund AS</span>
       </a>
       <div class="page-nav-links">
         <a href="../" class="page-nav_logo-wrap page-nav_logo-wrap-mobile">
-          <img src="../assets/images/korund-patch.svg" class="page-nav_logo">
+          <img src="../assets/images/korund_logo.svg" class="page-nav_logo">
           <span class="page-nav_logo-type">Korund AS</span>
         </a>
         <a class="page-nav-link" href="../">Startseite</a>
-        <a class="page-nav-link" href="./">Team</a>
+        <a title="Team" class="page-nav-link" href="./">Team</a>
         <a class="page-nav-link" href="../guidelines/">Leitlinie</a>
-        <a class="page-nav-link" href="../blog/">Blog</a>
+        <a title="Blog" class="page-nav-link" href="../blog/">Blog</a>
         <a class="page-nav-link" href="../contact/">Kontakt</a>
         <button onclick="document.getElementById('color-scheme-dialog').show()" style="appearance: none; background: transparent; border: none;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="color-scheme-icon visible-light">
@@ -62,32 +70,148 @@
 
   <header class="keyvisual-header">
     <div>
-      <h1>Das Team</h1>
+    <h1>Das Team</h1>
+
+    <p><strong>KORUND Airsoft</strong> entstand aus einer Gruppe Stammspieler im Airsoftpark Aachen, die zunächst einfach aus Vorliebe zu Ostblock-Gear zusammengespielt haben. Nach und nach festigte sich der Wunsch ein Team zu gründen und die Spielfelder in Nordrhein Westfalen mit unserem östlichen Charme zu entzücken.</p>
+    <p>Die Teamseite präsentiert einerseits unsere Mitglieder und vermittelt andererseits bildlich die Stil- und Ausrüstungsanforderungen. Bei jedem Teammitglied sind Lieblingsreplika und -tarnung gelistet - ideal zur Inspiration für das eigene Loadout und als Gesprächsgrundlage beim Kennenlernen.</p>
       
     </div>
     <figure class="keyvisual-header_figure">
+      <img src="../assets/images/korund_team_splash.jpg">
     </figure>
   </header>
 
   <div class="team-cards">
     
       <article class="team-card">
-    <header class="team-card_header">
-        Geisterfahrer
-    </header>
+
     <figure class="team-card_photo">
-        <img src="">
+        <img src="../members/buran.jpg">
     </figure>
-    <dl class="team-card_meta">
-        <dt>Rolle</dt>
-        <dd>a</dd>
-        <dt>Status</dt>
-        <dd>b</dd>
-        <dt>Replika</dt>
-        <dd>c</dd>
-        <dt>Tarnung</dt>
-        <dd>d</dd>
-    </dl>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Buran</span>
+            <span class="team-card_header_subtitle">Kugelhagel</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Verteidigung</dd>
+            <dt>Replika</dt>
+            <dd>E&amp;L AKM</dd>
+            <dt>Tarnung</dt>
+            <dd>Gorka</dd>
+        </dl>
+</article>
+
+    
+      <article class="team-card">
+
+    <figure class="team-card_photo">
+        <img src="../members/gloomy.jpg">
+    </figure>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Gloomy</span>
+            <span class="team-card_header_subtitle">Geisterfahrer</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Vorstoß</dd>
+            <dt>Replika</dt>
+            <dd>LCT AS Val HPA</dd>
+            <dt>Tarnung</dt>
+            <dd>Partizan</dd>
+        </dl>
+</article>
+
+    
+      <article class="team-card">
+
+    <figure class="team-card_photo">
+        <img src="../members/niklas.jpg">
+    </figure>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Niklas</span>
+            <span class="team-card_header_subtitle">CAD-Madman</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Aufklärung</dd>
+            <dt>Replika</dt>
+            <dd>KWA AK-74M</dd>
+            <dt>Tarnung</dt>
+            <dd>EMR</dd>
+        </dl>
+</article>
+
+    
+      <article class="team-card">
+
+    <figure class="team-card_photo">
+        <img src="../members/robbe.jpg">
+    </figure>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Robbe</span>
+            <span class="team-card_header_subtitle">Speedsofter</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Vorstoß</dd>
+            <dt>Replika</dt>
+            <dd>Cyma AKS-74U</dd>
+            <dt>Tarnung</dt>
+            <dd>Izlom</dd>
+        </dl>
+</article>
+
+    
+      <article class="team-card">
+
+    <figure class="team-card_photo">
+        <img src="../members/till.jpg">
+    </figure>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Till</span>
+            <span class="team-card_header_subtitle">Motivationscoach</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Vorstoß</dd>
+            <dt>Replika</dt>
+            <dd>Cyma AKMS</dd>
+            <dt>Tarnung</dt>
+            <dd>A-TACS FG</dd>
+        </dl>
+</article>
+
+    
+      <article class="team-card">
+
+    <figure class="team-card_photo">
+        <img src="../members/venzel.jpg">
+    </figure>
+
+        <header class="team-card_header">
+            <span class="team-card_header_title">Venzel</span>
+            <span class="team-card_header_subtitle">OCD-Patient</span>
+        </header>
+
+        <dl class="team-card_meta">
+            <dt>Rolle</dt>
+            <dd>Vorstoß</dd>
+            <dt>Replika</dt>
+            <dd>LCT VSS HPA</dd>
+            <dt>Tarnung</dt>
+            <dd>A-TACS FG</dd>
+        </dl>
 </article>
 
     
