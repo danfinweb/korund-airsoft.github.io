@@ -345,11 +345,7 @@ figure {
 
 .button-small {
     display: block;
-<<<<<<< HEAD
     padding: var(--space-3xs) var(--space-2xs);
-=======
-    padding: var(--space-3xs);
->>>>>>> 62f49c47c4c7226af1713997a2ab3f59536dc2a8
     border-radius: var(--space-3xs);
     text-decoration: none;
     text-align: center;
@@ -414,13 +410,6 @@ figure {
     background-color: var(--base-100);
     padding: var(--space-s);
     border-radius: var(--space-3xs);
-<<<<<<< HEAD
-=======
-
-    & div {
-        flex-direction: column;
-    }
->>>>>>> 62f49c47c4c7226af1713997a2ab3f59536dc2a8
 
     .article-cards-vertical & {
         grid-column: 1/-1;
@@ -458,15 +447,12 @@ figure {
 
     & h1 {
         font-size: var(--step-1);
-<<<<<<< HEAD
     }
 
     & .article-card_content {
         display: flex;
         flex-direction: column;
         gap: var(--space-xs);
-=======
->>>>>>> 62f49c47c4c7226af1713997a2ab3f59536dc2a8
     }
 
     & .article-card_body {
