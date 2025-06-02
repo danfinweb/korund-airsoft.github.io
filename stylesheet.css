@@ -159,7 +159,7 @@ h1 {
 }
 
 .headline-margin {
-    margin-bottom: var(--space-s);
+    margin-bottom: var(--space-2xs);
 }
 
 h3 {
