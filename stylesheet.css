@@ -343,6 +343,16 @@ figure {
 
 }
 
+.button-small {
+    display: block;
+    padding: var(--space-3xs);
+    border-radius: var(--space-3xs);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .button-primary {
     background-color: var(--primary) !important;
     color: var(--primary-content) !important;
@@ -374,7 +384,7 @@ figure {
 .article-cards-vertical {
     display: grid;
     gap: var(--space-s) var(--space-m);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
 }
 
 .article-card {
@@ -385,19 +395,12 @@ figure {
     border-radius: var(--space-3xs);
 
     & div {
-        gap: var(--space-xs);
         flex-direction: column;
-    }
-
-     & div > * {
-        margin-bottom: var(--space-s);
     }
 
     .article-cards-vertical & {
         grid-column: 1/-1;
         grid-template-columns: subgrid;
-        gap: var(--space-s);
-
         & > div {
             gap: var(--space-3xs);
         }
@@ -450,6 +453,7 @@ figure {
     }
     .article-card {
         margin-block-end: 0;
+        max-height: 14rem;
 
         & header {
             margin-block-start: 0;
@@ -471,7 +475,7 @@ figure {
 
 .keyvisual-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
     gap: var(--space-m);
     margin: var(--space-s) 0; 
 }
@@ -561,6 +565,14 @@ figure {
     }
     .keyvisual-header {
         grid-template-columns: 1fr;
+    }
+
+     .article-cards-vertical {
+        grid-template-columns: 1fr;
+    }
+
+    .article-card {
+       grid-column: 1;         
     }
 }
 
