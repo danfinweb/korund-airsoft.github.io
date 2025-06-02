@@ -260,7 +260,7 @@ figure {
     margin-right: auto;
     font-size: var(--step-1);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .page-nav_logo-wrap-mobile {
@@ -420,9 +420,6 @@ figure {
     .article-cards-vertical & {
         grid-column: 1/-1;
         grid-template-columns: subgrid;
-        & > div {
-            gap: var(--space-3xs);
-        }
 
         .article-card_body {
             margin-bottom: auto;
@@ -483,7 +480,6 @@ figure {
     }
     .article-card {
         margin-block-end: 0;
-        max-height: 14rem;
 
         & header {
             margin-block-start: 0;
@@ -694,7 +690,7 @@ figure {
 
     & dt {
         color: var(--primary);
-        font-weight: bold;
+        font-weight: 600;
     }
 }
 
@@ -765,7 +761,7 @@ figure {
 
     & label {
         font-size: var(--step--1);
-        font-weight: bold;
+        font-weight: 600;
         color: var(--primary);
     }
 
