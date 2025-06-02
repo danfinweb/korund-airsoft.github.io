@@ -1,5 +1,5 @@
 <!DOCTYPE html><html data-theme="dark"><head>
-    <title>Impressum</title>
+    <title>Impressum – KORUND Airsoft</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -7,7 +7,15 @@
     <link rel="icon" href="../assets/images/korund-patch.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png"><!-- 180×180 -->
     <link rel="stylesheet" href="../stylesheet.css">
-    <script src=""></script>
+    <script type="importmap">
+  {
+    "imports": {
+      "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.2.2/dist/stimulus.js"
+    }
+  }
+</script>
+
+    <script type="module" src="../js/controllers.js"></script>
   </head>
   <body data-controller="color-scheme-toggle">
     <dialog id="color-scheme-dialog">
@@ -62,10 +70,13 @@
 
   
 
-  <header class="clamp-line" style="--clamp-line: 2">
-    <h1>
+  <header class="stack">
+    <h1 class="clamp-line" style="--clamp-line: 2">
       Impressum
     </h1>
+    <div class="pills" style="--flow-space: var(--space-xs)">
+      
+    </div>
   </header>
 
   <h2 id="angaben-gem--5-tmg">Angaben gemäß § 5 TMG</h2>

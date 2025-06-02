@@ -59,13 +59,13 @@
 :root {
   color-scheme: light dark;
 
-  --primary: #776b1d;
+  --primary: #89813d;
   --primary-content: #FFFFFF;
   --base-100: light-dark(#FFFFFF, #28230b);
   --base-200: light-dark(#EFEEE9, #141105);
   --base-300: #FAFAFA;
   --base-content: light-dark(#141105, #EFEEE9);
-  --neutral: #28230b;
+  --neutral: #28230b);
   --neutral-dark: #141105;
   --neutral-content: #E6E6E6;
 }
@@ -79,7 +79,7 @@
 }
 
 html {
-    min-height: 100%;
+    height: 100%;
     background-color: var(--base-200);
     color: var(--base-content);
 }
@@ -173,7 +173,6 @@ img {
 a:link,
 a:visited {
     color: var(--primary);
-    font-weight: semibold;
     text-decoration: none;
 }
 
@@ -220,6 +219,9 @@ figure {
 
     padding: var(--space-s);
 
+    & .page-nav_logo-type {
+        font-weight: bold;
+    }
 
     & a:link,
     & a:visited {
@@ -345,7 +347,7 @@ figure {
 
 .button-small {
     display: block;
-    padding: var(--space-3xs);
+    padding: var(--space-3xs) var(--space-2xs);
     border-radius: var(--space-3xs);
     text-decoration: none;
     text-align: center;
@@ -356,6 +358,25 @@ figure {
 .button-primary {
     background-color: var(--primary) !important;
     color: var(--primary-content) !important;
+}
+
+.pills {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-3xs);
+}
+
+.pill {
+    font-size: var(--step--1);
+    border-radius: var(--step-5);
+    padding: 0 var(--space-2xs);
+    font-weight: 600;
+    
+    &.pill-primary {
+        background: var(--neutral-dark);
+        color: var(--primary-content);
+    }
 }
 
 .article {
@@ -393,10 +414,6 @@ figure {
     background-color: var(--base-100);
     padding: var(--space-s);
     border-radius: var(--space-3xs);
-
-    & div {
-        flex-direction: column;
-    }
 
     .article-cards-vertical & {
         grid-column: 1/-1;
@@ -436,6 +453,12 @@ figure {
         font-size: var(--step-1);
     }
 
+    & .article-card_content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
     & .article-card_body {
         .article-cards-horizontal & {
             --clamp-line: 4;
@@ -443,6 +466,11 @@ figure {
         .article-cards-vertical & {
             --clamp-line: 4;
         }
+    }
+
+    & .button-small {
+        align-self: flex-start;
+        justify-self: start;
     }
 }
 
@@ -491,11 +519,30 @@ figure {
     }
 }
 
+.landingpage-keyvisual_overlay {
+    position: absolute;
+    background-image: url("assets/images/fog.jpg");
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    mix-blend-mode: screen;
+    opacity: 33%;
+    overflow: hidden;
+
+}
+
 .landingpage-keyvisual {
     display: flex;
     overflow: hidden;
     max-height: 50vh;
-    min-height: 320px;
+    min-height: 24rem;
     background-color: #000000;
     justify-content: center;
 

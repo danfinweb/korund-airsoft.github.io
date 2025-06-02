@@ -1,5 +1,5 @@
 <!DOCTYPE html><html data-theme="dark"><head>
-    <title>KORUND Airsoft – Teamleitlinie</title>
+    <title>Teamleitlinie – KORUND Airsoft</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -7,7 +7,15 @@
     <link rel="icon" href="../assets/images/korund-patch.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png"><!-- 180×180 -->
     <link rel="stylesheet" href="../stylesheet.css">
-    <script src=""></script>
+    <script type="importmap">
+  {
+    "imports": {
+      "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.2.2/dist/stimulus.js"
+    }
+  }
+</script>
+
+    <script type="module" src="../js/controllers.js"></script>
   </head>
   <body data-controller="color-scheme-toggle">
     <dialog id="color-scheme-dialog">
@@ -62,10 +70,13 @@
 
   
 
-  <header class="clamp-line" style="--clamp-line: 2">
-    <h1>
-      KORUND Airsoft – Teamleitlinie
+  <header class="stack">
+    <h1 class="clamp-line" style="--clamp-line: 2">
+      Teamleitlinie
     </h1>
+    <div class="pills" style="--flow-space: var(--space-xs)">
+      
+    </div>
   </header>
 
   <p>Wenn du darüber nachdenkst, dich <strong>KORUND Airsoft</strong> anzuschließen, beschreibt unsere Leitlinie das, was dich bei uns erwartet – und was wir von dir erwarten.
@@ -178,7 +189,7 @@ Ausschlüsse erfolgen bei grobem Fehlverhalten, fehlender Teilnahme, Sicherheits
 <p>Entscheidungen über Ausschlüsse werden intern besprochen und von der Teamleitung beschlossen.</p>
 
 <h2 id="kommunikation">9. Kommunikation</h2>
-<p>Unsere interne Kommunikation erfolgt über Discord und WhatsApp.
+<p>Unsere interne Kommunikation erfolgt über Discord, Airsoft Verzeichnis und WhatsApp.
 Respektvoller Umgangston ist selbstverständlich.
 Interne Informationen bleiben intern.</p>
 
