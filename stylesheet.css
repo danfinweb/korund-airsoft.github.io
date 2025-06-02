@@ -65,7 +65,7 @@
   --base-200: light-dark(#EFEEE9, #141105);
   --base-300: #FAFAFA;
   --base-content: light-dark(#141105, #EFEEE9);
-  --neutral: #28230b);
+  --neutral: #28230b;
   --neutral-dark: #141105;
   --neutral-content: #E6E6E6;
 }
@@ -231,7 +231,7 @@ figure {
 
 .page-nav-links {
     display: none;
-    padding: var(--space-m);
+    padding: var(--space-s);
     position: absolute;
     z-index: 1;
     top: 0;
@@ -374,7 +374,7 @@ figure {
     font-weight: 600;
     
     &.pill-primary {
-        background: var(--neutral-dark);
+        background: var(--primary);
         color: var(--primary-content);
     }
 }
@@ -620,6 +620,13 @@ figure {
 
     .article-card {
        grid-column: 1;         
+    }
+
+    .page-nav-links {
+        
+        & button {
+            margin: var(--space-xs) 0;
+        }
     }
 }
 
