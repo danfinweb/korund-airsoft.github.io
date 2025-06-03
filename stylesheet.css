@@ -59,7 +59,7 @@
 :root {
   color-scheme: light dark;
 
-  --primary: #776b1d;
+  --primary: #89813d;
   --primary-content: #FFFFFF;
   --base-100: light-dark(#FFFFFF, #28230b);
   --base-200: light-dark(#EFEEE9, #141105);
@@ -173,7 +173,6 @@ img {
 a:link,
 a:visited {
     color: var(--primary);
-    font-weight: semibold;
     text-decoration: none;
 }
 
@@ -215,11 +214,12 @@ figure {
 .page-nav {
     color: var(--base-content);
     background-color: var(--base-100);
-
     font-size: var(--step-2);
-
     padding: var(--space-s);
 
+    & .page-nav_logo-type {
+        font-weight: bold;
+    }
 
     & a:link,
     & a:visited {
@@ -229,7 +229,7 @@ figure {
 
 .page-nav-links {
     display: none;
-    padding: var(--space-m);
+    padding: var(--space-s);
     position: absolute;
     z-index: 1;
     top: 0;
@@ -255,12 +255,12 @@ figure {
 
 .page-nav_logo-wrap {
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--space-2xs);
     align-items: center;
     margin-right: auto;
     font-size: var(--step-1);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .page-nav_logo-wrap-mobile {
@@ -268,10 +268,20 @@ figure {
 }
 
 .page-nav_logo {
-    width: var(--space-l);
+    width: var(--space-m);
+    background-color: var(--neutral-dark);
+    padding: var(--space-3xs);
+    border-radius: var(--space-l);
+    border: 1px solid var(--primary);
 }
 
 @media screen AND (min-width: 40rem) {
+
+    .keyvisual-header {
+            & > *:nth-child(1) { order: 1 !important; }
+            & > *:nth-child(2) { order: 2 !important; }
+    }
+
     .page-nav-toggle {
         display: none;
     }
@@ -305,6 +315,7 @@ figure {
     padding: var(--space-s  );
     background-color: var(--base-100);
     color: var(--base-content);
+    font-weight: 600;
 
 
     & > * {
@@ -337,7 +348,7 @@ figure {
     border-radius: var(--space-3xs)  !important;
     text-decoration: none;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     justify-content: center;
     align-items: center;
 
@@ -365,10 +376,17 @@ figure {
     gap: var(--space-3xs);
 }
 
+.pills:not(:has(.pill)) {
+    display: none;
+  }
+  
+
 .pill {
     font-size: var(--step--1);
     border-radius: var(--step-5);
     padding: 0 var(--space-2xs);
+    font-weight: 600;
+    
     &.pill-primary {
         background: var(--primary);
         color: var(--primary-content);
@@ -414,9 +432,6 @@ figure {
     .article-cards-vertical & {
         grid-column: 1/-1;
         grid-template-columns: subgrid;
-        & > div {
-            gap: var(--space-3xs);
-        }
 
         .article-card_body {
             margin-bottom: auto;
@@ -433,7 +448,6 @@ figure {
     & header {
         --clamp-line: 2;
         margin-block-start: var(--space-xs);
-        margin-block-end: var(--space-xs);
     }
 
     & img {
@@ -477,7 +491,6 @@ figure {
     }
     .article-card {
         margin-block-end: 0;
-        max-height: 14rem;
 
         & header {
             margin-block-start: 0;
@@ -499,10 +512,18 @@ figure {
 
 .keyvisual-header {
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-m);
-    margin: var(--space-s) 0; 
+    margin: var(--space-s) 0;
+
+    & > *:nth-child(1) { order: 1 }
+    & > *:nth-child(2) { order: 2 }
+    & > .img-ontop {
+    order: 0;
+  }
 }
+
+
 
 .keyvisual-header_figure {
     border-radius: var(--space-3xs);
@@ -527,7 +548,7 @@ figure {
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 2;
     mix-blend-mode: screen;
     opacity: 33%;
     overflow: hidden;
@@ -608,6 +629,7 @@ figure {
     }
     .keyvisual-header {
         grid-template-columns: 1fr;
+        gap: var(--space-s);
     }
 
      .article-cards-vertical {
@@ -616,6 +638,13 @@ figure {
 
     .article-card {
        grid-column: 1;         
+    }
+
+    .page-nav-links {
+        
+        & button {
+            margin: var(--space-xs) 0;
+        }
     }
 }
 
@@ -681,7 +710,7 @@ figure {
 
     & dt {
         color: var(--primary);
-        font-weight: bold;
+        font-weight: 600;
     }
 }
 
@@ -707,9 +736,10 @@ figure {
 }
 
 .wide,
-.narrow {
-    padding-left: var(--space-l);
-    padding-right: var(--space-l);
+.narrow,
+.extra-narrow {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
 }
 
 .wide {
@@ -718,6 +748,12 @@ figure {
 
 .narrow {
     max-width: 120ex;
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
+}
+
+.extra-narrow {
+    max-width: 90ex;
     padding-top: var(--space-s);
     padding-bottom: var(--space-s);
 }
@@ -752,7 +788,7 @@ figure {
 
     & label {
         font-size: var(--step--1);
-        font-weight: bold;
+        font-weight: 600;
         color: var(--primary);
     }
 
@@ -771,4 +807,8 @@ figure {
         background-color: var(--base-100);
         font-size: var(--step-0);
     } 
+}
+
+.force-show {
+    display: block;
 }
