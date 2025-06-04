@@ -156,6 +156,7 @@ main {
 
 h1 {
     margin: 0;
+    font-size: var(--step-3);    
 }
 
 .headline-margin {
