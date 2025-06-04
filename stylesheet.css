@@ -685,12 +685,17 @@ figure {
         gap: var(--space-s);
     }
 
+    .article-cards-horizontal {
+        grid-template-rows: none;
+    }
+
      .article-cards-vertical {
         grid-template-columns: 1fr;
     }
 
+
     .article-card {
-       grid-column: 1;         
+       grid-column: 1;
     }
 
     .page-nav-links {
@@ -698,6 +703,10 @@ figure {
         & button {
             margin: var(--space-xs) 0;
         }
+    }
+
+    footer {
+        font-size: var(--step--1); 
     }
 }
 
@@ -707,14 +716,12 @@ figure {
     }
 
     .article {
-        margin-left: var(--space-s) !important;
-        margin-right: var(--space-s) !important;
+        margin: var(--space-2xs) !important;
         padding: var(--space-s) !important;
-
         & h1 {
             font-size: var(--step-1);
         }
-    }   
+    }
 }
 
 .team-cards {
