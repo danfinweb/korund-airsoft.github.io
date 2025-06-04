@@ -434,10 +434,6 @@ figure {
             border-radius: var(--space-3xs);
         }
     }
-
-    & h1 {
-        font-size: var(--step-1);
-    }
 }
 
 .author-subtitle {
