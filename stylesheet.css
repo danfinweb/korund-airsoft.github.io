@@ -156,6 +156,7 @@ main {
 
 h1 {
     margin: 0;
+    font-size: var(--step-3);    
 }
 
 .headline-margin {
@@ -174,6 +175,10 @@ a:link,
 a:visited {
     color: var(--primary);
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-content);
 }
 
 figure {
@@ -276,6 +281,12 @@ figure {
 }
 
 @media screen AND (min-width: 40rem) {
+
+    .keyvisual-header {
+            & > *:nth-child(1) { order: 1 !important; }
+            & > *:nth-child(2) { order: 2 !important; }
+    }
+
     .page-nav-toggle {
         display: none;
     }
@@ -306,22 +317,39 @@ figure {
 .page-footer {
     display: flex;
     justify-content: center;
-    padding: var(--space-s  );
+    padding: var(--space-s);
     background-color: var(--base-100);
     color: var(--base-content);
+    font-weight: 600;
 
 
     & > * {
         padding: 0 var(--space-s);
     }
 
-    & * + * {
-        border-left: 2px solid var(--neutral-content);
+    & div {
+        display: flex;
+        border-right: 2px solid var(--neutral-content);
+        gap: var(--space-xs);
     }
 
     & a:link,
     & a:visited {
         color: inherit;
+    }
+
+    & a svg {
+        width: 100%;
+        height: var(--step-1);
+        fill: var(--base-300)
+    }
+
+    & a:hover {
+        color: var(--primary);
+    }
+
+    & a:hover svg {
+        fill: var(--primary);
     }
 }
 
@@ -344,17 +372,19 @@ figure {
     font-weight: 600;
     justify-content: center;
     align-items: center;
+    line-height: 1;
 
 }
 
 .button-small {
     display: block;
-    padding: var(--space-3xs) var(--space-2xs);
+    padding: var(--space-2xs) var(--space-2xs);
     border-radius: var(--space-3xs);
     text-decoration: none;
     text-align: center;
     justify-content: center;
     align-items: center;
+    line-height: 1;
 }
 
 .button-primary {
@@ -369,19 +399,28 @@ figure {
     gap: var(--space-3xs);
 }
 
+.pills:not(:has(.pill)) {
+    display: none;
+  }
+  
+
 .pill {
     font-size: var(--step--1);
-    border-radius: var(--step-5);
-    padding: 0 var(--space-2xs);
+    border-radius: var(--space-3xs);
+    padding: var(--space-3xs) var(--space-3xs);
     font-weight: 600;
+    line-height: 1;
     
     &.pill-primary {
-        background: var(--primary);
-        color: var(--primary-content);
+        background: var(--base-200);
+        color: var(--base-content);
     }
 }
 
 .article {
+    margin-block-start: var(--space-m);
+    background-color: var(--base-100);
+    border-radius: var(--space-3xs);
 
     & .keyvisual {
         max-height: 50vh;
@@ -395,11 +434,33 @@ figure {
             border-radius: var(--space-3xs);
         }
     }
+
+    & h1 {
+        font-size: var(--step-1);
+    }
+}
+
+.author-subtitle {
+    font-size: var(--step--1);
+
+    a {
+        font-weight: 600;
+    }
+
+    & span {
+        font-weight: bold;
+        color: var(--primary);
+    }
+}
+
+.blog-year {
+    font-size: var(--step-1);
+    font-weight: bold;
 }
 
 .article-cards-horizontal {
     display: grid;
-    gap: var(--space-3xs) var(--space-s);
+    gap: var(--space-s) var(--space-s);
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content max-content max-content;
 }
@@ -436,7 +497,6 @@ figure {
     & header {
         --clamp-line: 2;
         margin-block-start: var(--space-xs);
-        margin-block-end: var(--space-xs);
     }
 
     & img {
@@ -501,10 +561,18 @@ figure {
 
 .keyvisual-header {
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-m);
-    margin: var(--space-s) 0; 
+    margin: var(--space-s) 0;
+
+    & > *:nth-child(1) { order: 1 }
+    & > *:nth-child(2) { order: 2 }
+    & > .img-ontop {
+    order: 0;
+  }
 }
+
+
 
 .keyvisual-header_figure {
     border-radius: var(--space-3xs);
@@ -610,6 +678,7 @@ figure {
     }
     .keyvisual-header {
         grid-template-columns: 1fr;
+        gap: var(--space-s);
     }
 
      .article-cards-vertical {
@@ -716,9 +785,12 @@ figure {
 }
 
 .wide,
-.narrow {
-    padding-left: var(--space-l);
-    padding-right: var(--space-l);
+.narrow,
+.extra-narrow {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-s);
 }
 
 .wide {
@@ -727,8 +799,10 @@ figure {
 
 .narrow {
     max-width: 120ex;
-    padding-top: var(--space-s);
-    padding-bottom: var(--space-s);
+}
+
+.extra-narrow {
+    max-width: 90ex;
 }
 
 .mx-auto {
@@ -780,4 +854,8 @@ figure {
         background-color: var(--base-100);
         font-size: var(--step-0);
     } 
+}
+
+.force-show {
+    display: block;
 }
