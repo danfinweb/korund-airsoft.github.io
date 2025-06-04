@@ -176,6 +176,10 @@ a:visited {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--primary-content);
+}
+
 figure {
     margin: 0;
 }
@@ -312,7 +316,7 @@ figure {
 .page-footer {
     display: flex;
     justify-content: center;
-    padding: var(--space-s  );
+    padding: var(--space-s);
     background-color: var(--base-100);
     color: var(--base-content);
     font-weight: 600;
@@ -322,13 +326,29 @@ figure {
         padding: 0 var(--space-s);
     }
 
-    & * + * {
-        border-left: 2px solid var(--neutral-content);
+    & div {
+        display: flex;
+        border-right: 2px solid var(--neutral-content);
+        gap: var(--space-xs);
     }
 
     & a:link,
     & a:visited {
         color: inherit;
+    }
+
+    & a svg {
+        width: 100%;
+        height: var(--step-1);
+        fill: var(--base-300)
+    }
+
+    & a:hover {
+        color: var(--primary);
+    }
+
+    & a:hover svg {
+        fill: var(--primary);
     }
 }
 
@@ -409,9 +429,22 @@ figure {
     }
 }
 
+.author-subtitle {
+    font-size: var(--step--1);
+
+    a {
+        font-weight: 600;
+    }
+
+    & span {
+        font-weight: bold;
+        color: var(--primary);
+    }
+}
+
 .article-cards-horizontal {
     display: grid;
-    gap: var(--space-3xs) var(--space-s);
+    gap: var(--space-s) var(--space-s);
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content max-content max-content;
 }
