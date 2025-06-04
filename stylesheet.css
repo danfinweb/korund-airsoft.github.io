@@ -421,6 +421,10 @@ figure {
     }
 }
 
+.article-list {
+    margin-top: var(--space-m);
+}
+
 .article {
     margin-block-start: var(--space-m);
     background-color: var(--base-100);
