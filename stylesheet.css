@@ -687,10 +687,12 @@ figure {
 
     .article-cards-horizontal {
         grid-template-rows: none;
+        gap: 0;
     }
 
      .article-cards-vertical {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
 
