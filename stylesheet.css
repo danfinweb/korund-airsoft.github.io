@@ -159,12 +159,16 @@ h1 {
     font-size: var(--step-3);    
 }
 
-.headline-margin {
-    margin-bottom: var(--space-2xs);
+h2 {
+    font-size: var(--step-1);
 }
 
 h3 {
     font-size: var(--step--0);
+}
+
+.headline-margin {
+    margin-bottom: var(--space-2xs);
 }
 
 img {
@@ -341,7 +345,7 @@ figure {
     & a svg {
         width: 100%;
         height: var(--step-1);
-        fill: var(--base-300)
+        fill: var(--base-content)
     }
 
     & a:hover {
@@ -372,17 +376,19 @@ figure {
     font-weight: 600;
     justify-content: center;
     align-items: center;
+    line-height: 1;
 
 }
 
 .button-small {
     display: block;
-    padding: var(--space-3xs) var(--space-2xs);
+    padding: var(--space-2xs) var(--space-2xs);
     border-radius: var(--space-3xs);
     text-decoration: none;
     text-align: center;
     justify-content: center;
     align-items: center;
+    line-height: 1;
 }
 
 .button-primary {
@@ -404,17 +410,25 @@ figure {
 
 .pill {
     font-size: var(--step--1);
-    border-radius: var(--step-5);
-    padding: 0 var(--space-2xs);
+    border-radius: var(--space-3xs);
+    padding: var(--space-3xs) var(--space-3xs);
     font-weight: 600;
+    line-height: 1;
     
     &.pill-primary {
-        background: var(--primary);
-        color: var(--primary-content);
+        background: var(--base-200);
+        color: var(--base-content);
     }
 }
 
+.article-list {
+    margin-top: var(--space-m);
+}
+
 .article {
+    margin-block-start: var(--space-m);
+    background-color: var(--base-100);
+    border-radius: var(--space-3xs);
 
     & .keyvisual {
         max-height: 50vh;
@@ -441,6 +455,11 @@ figure {
         font-weight: bold;
         color: var(--primary);
     }
+}
+
+.blog-year {
+    font-size: var(--step-1);
+    font-weight: bold;
 }
 
 .article-cards-horizontal {
@@ -666,12 +685,19 @@ figure {
         gap: var(--space-s);
     }
 
-     .article-cards-vertical {
-        grid-template-columns: 1fr;
+    .article-cards-horizontal {
+        grid-template-rows: none;
+        gap: 0;
     }
 
+     .article-cards-vertical {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
     .article-card {
-       grid-column: 1;         
+       grid-column: 1;
     }
 
     .page-nav-links {
@@ -680,11 +706,23 @@ figure {
             margin: var(--space-xs) 0;
         }
     }
+
+    footer {
+        font-size: var(--step--1); 
+    }
 }
 
 @media (max-width: calc(48rem - 1px)) {
     .keyvisual-header {
         grid-template-columns: 1fr;
+    }
+
+    .article {
+        margin: var(--space-m) !important;
+        padding: var(--space-s) !important;
+        & h1 {
+            font-size: var(--step-1);
+        }
     }
 }
 
@@ -728,7 +766,7 @@ figure {
     & img {
         width: 100%;
         object-fit: cover;
-        object-position: center center;
+        object-position: top center;
         border-radius: var(--space-3xs);
     }
 }
@@ -737,6 +775,7 @@ figure {
     display: grid;
     grid-template-columns: 1fr 4fr;
     margin: 0;
+    font-size: var(--step--1);
 
     & dd {
         margin-left: var(--space-s)
@@ -782,14 +821,12 @@ figure {
 
 .narrow {
     max-width: 120ex;
-    padding-top: var(--space-s);
-    padding-bottom: var(--space-s);
 }
 
 .extra-narrow {
     max-width: 90ex;
-    padding-top: var(--space-s);
-    padding-bottom: var(--space-s);
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
 }
 
 .mx-auto {
@@ -846,3 +883,4 @@ figure {
 .force-show {
     display: block;
 }
+
