@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: "Geist";
-    src: url("/Geist-VariableFont_wght.ttf") format("truetype-variations");
+    src: url("assets/fonts/Geist-VariableFont_wght.ttf") format("truetype-variations");
     font-display: swap;
     font-weight: 100 900;
 }
