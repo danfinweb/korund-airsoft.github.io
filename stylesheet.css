@@ -760,7 +760,7 @@ figure {
 }
 
 .team-card_photo {
-    aspect-ratio: 340/400;
+    aspect-ratio: 1/1; /* initial ratio 340/400 */
     display: flex;
 
     & img {
